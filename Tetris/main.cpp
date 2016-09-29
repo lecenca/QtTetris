@@ -1,6 +1,5 @@
-#include <QApplication>
-
 #include "MainSurface.h"
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {

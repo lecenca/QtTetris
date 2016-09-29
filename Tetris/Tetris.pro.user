@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.0.2, 2016-09-20T12:04:01. -->
+<!-- Written by QtCreator 4.0.2, 2016-09-29T13:06:47. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -168,7 +168,9 @@
     </valuemap>
     <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
     <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
-    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
+     <value type="QString">PATH=D:\Qt\Qt5.7.0\5.7\mingw53_32\bin;D:\Qt\Qt5.7.0\Tools\mingw530_32\bin;D:\Program Files\Java\jdk1.8.0_65\bin;D:\Program Files\Java\jdk1.8.0_65\jre\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Acer\abFiles\;D:\TDM-GCC-32\bin;D:\cygwin\bin;D:\TDM-GCC-32\gdb32\bin;D:\Program Files\LLVM\bin;D:\Program Files\Git\cmd;D:\Program Files\CMake\bin;D:\cygwin64\bin;D:\Program Files\Rust stable GNU 1.11\bin;D:\Qt\Qt5.7.0\5.7\mingw53_32\bin;D:\Qt\Qt5.7.0\Tools\mingw530_32\bin;D:\Qt\Qt5.7.0\Tools\QtCreator\bin;D:\Qt\Qt5.7.0\Tools\QtCreator\lib;D:\Qt\Qt5.7.0\5.7\mingw53_32\lib;</value>
+    </valuelist>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Release</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4BuildConfiguration</value>

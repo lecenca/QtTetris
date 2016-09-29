@@ -20,22 +20,20 @@ public:
 
 protected:
     void keyPressEvent(QKeyEvent *event);
-    //执行按键按下时对应的行为
 
 private slots:
     void on_startRestartButton_clicked();
-    //按下开始键的行为
+
     void on_quitButton_clicked();
-    //按下退出键的行为
 
 private:
-    Ui::Widget *ui;  //界面对象
-    GameScene *playGround; //游戏窗口对象
-    BlockScene *nextBlockWindow; //显示下一个俄罗斯方块的对象
-    int score; //分数
+    Ui::Widget *ui;
+    GameScene *playGround;
+    BlockScene *nextBlockWindow;
+    int score;
 
-    void refreshScore(int sco); //更新分数
-    void gameOver(); //结束游戏
+    void refreshScore(int sco);
+    void gameOver();
 };
 
 #endif // WIDGET_H

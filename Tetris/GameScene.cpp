@@ -14,7 +14,7 @@ GameScene::GameScene(QObject *parent) : QGraphicsScene(parent)
 {
     //初始化每个格子
     for(int i = 0;i<13;++i){
-        for(int j = 0;j<=21;++j){
+        for(int j = 0;j<21;++j){
             grid[i][j] = new Cell();
             grid[i][j]->setPos(i*30,j*30);
             grid[i][j]->setVisible(false);
@@ -185,10 +185,8 @@ void GameScene::eraseFullLine()
     bool full;
     int x,y;
     int scr = 0;
-    //从上到下检查，但不检查最上面一行，若最上面一行有方块，则认定为游戏结束
     for(y = 20;y>0;--y){
         full = true;
-        //检查第i行是否满
         for(x = 0;x<13;++x){
             if(!grid[x][y]->isVisible()){
                 full = false;
@@ -196,38 +194,33 @@ void GameScene::eraseFullLine()
             }
         }
         if(full){
-            //满的话就消掉
             for(x = 0;x<13;++x){
                 grid[x][y]->setVisible(false);
             }
-            //消掉一行加一分
             ++scr;
         }else{
-            //不满，则将这行往下移
             for(x = 0;x<13;++x){
                 if(grid[x][y]->isVisible()){
                     grid[x][y]->setVisible(false);
-                    //目前得到scr分，说明已经消了scr行，要往下移scr行
                     grid[x][y+scr]->setVisible(true);
                     grid[x][y+scr]->setBrush(grid[x][y]->brush());
                 }
             }
         }
     }
-    score += scr; //求出总分
-    emit newScore(score); //告诉其他对象新的总分
+    score += scr;
+    emit newScore(score);
 }
 
 void GameScene::checkGameOver()
 {
-    //检测最上面一行有没有方块，有就说明游戏结束
     for(int x = 0;x<13;++x){
         if(grid[x][0]->isVisible()){
             start = false;
             messageBoard->setHtml(QString("<h1>You total score is</h1></br>"
                                           "<h1>%1</h1>").arg(QString::number(score)));
             messageBoard->setVisible(true);
-            emit endGame();   //告诉其他对象游戏已经结束
+            emit endGame();
             break;
         }
     }
