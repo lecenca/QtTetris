@@ -27,3 +27,8 @@ HEADERS  += \
     BlockScene.h
 
 FORMS    += widget.ui
+
+DISTFILES +=
+
+RESOURCES += \
+    res.qrc

@@ -28,7 +28,8 @@ GameScene::GameScene(QObject *parent) : QGraphicsScene(parent)
     timer->start(500);    //每500ms刷新一次界面
     messageBoard = new QGraphicsTextItem();
     addItem(messageBoard);
-    messageBoard->setPos(90,270);   //设置结束信息的位置
+    messageBoard->setPos(80,270);   //设置结束信息的位置
+    messageBoard->setFont(QFont("AR BERKLEY",20));
     messageBoard->setVisible(false);
     //时间一到就用void moveDown()刷新界面
     QObject::connect(timer,&QTimer::timeout,
@@ -217,8 +218,8 @@ void GameScene::checkGameOver()
     for(int x = 0;x<13;++x){
         if(grid[x][0]->isVisible()){
             start = false;
-            messageBoard->setHtml(QString("<h1>You total score is</h1></br>"
-                                          "<h1>%1</h1>").arg(QString::number(score)));
+            messageBoard->setHtml(QString("<h3>You total score is</h3></br>"
+                                          "<h3>%1</h3>").arg(QString::number(score)));
             messageBoard->setVisible(true);
             emit endGame();
             break;
